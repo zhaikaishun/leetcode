@@ -12,8 +12,8 @@ public class Solution {
 
     public TreeNode reConstructBinaryTree(int [] pre, int [] in) {
 
-        stackReconstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
-        return null;
+        TreeNode treeNode = stackReconstructBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1);
+        return treeNode;
     }
 
     private TreeNode stackReconstructBinaryTree(int[] pre, int pStart, int pEnd ,
