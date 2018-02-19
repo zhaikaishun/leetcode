@@ -13,6 +13,7 @@ public class Solution {
             System.out.print(ints[i]+" ");
         }
     }
+    // 冒泡排序
     public static int[] bubbleSort(int [] array) {
         int len = array.length;
         for (int i = 0; i <len ; i++) {
