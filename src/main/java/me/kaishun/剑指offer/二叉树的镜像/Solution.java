@@ -1,5 +1,7 @@
 package me.kaishun.剑指offer.二叉树的镜像;
 
+import me.kaishun.工具类.TreeNode;
+
 /**
  * 操作给定的二叉树，将其变换为源二叉树的镜像。
  *
@@ -20,9 +22,9 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode treeNode = solution.new TreeNode(8);
-        treeNode.left=solution.new TreeNode(6);
-        treeNode.left=solution.new TreeNode(10);
+        TreeNode treeNode = new TreeNode(8);
+        treeNode.left=new TreeNode(6);
+        treeNode.right=new TreeNode(10);
         solution.Mirror(treeNode);
     }
 
@@ -37,18 +39,5 @@ public class Solution {
             Mirror(root.left);
             Mirror(root.right);
         }
-    }
-
-
-    public class TreeNode {
-        int val = 0;
-        TreeNode left = null;
-        TreeNode right = null;
-
-        public TreeNode(int val) {
-            this.val = val;
-
-        }
-
     }
 }

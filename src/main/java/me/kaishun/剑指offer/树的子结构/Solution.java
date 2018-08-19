@@ -1,5 +1,7 @@
 package me.kaishun.剑指offer.树的子结构;
 
+import me.kaishun.工具类.TreeNode;
+
 /**
  * 输入两棵二叉树A，B，判断B是不是A的子结构。
  * （ps：我们约定空树不是任意一个树的子结构）
@@ -10,7 +12,7 @@ public class Solution {
 
 
 
-    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+    public boolean HasSubtree(TreeNode root1, TreeNode root2) {
         boolean result = false;
         // 只要有一个为空，那么就返回false
         if(root1==null||root2==null){
@@ -47,17 +49,5 @@ public class Solution {
             //如果根节点对应的上，那么就分别去子节点里面匹配
             return checkContains(node1.left,node2.left) && checkContains(node1.right,node2.right);
         }
-    }
-
-    public class TreeNode {
-        int val = 0;
-        TreeNode left = null;
-        TreeNode right = null;
-
-        public TreeNode(int val) {
-            this.val = val;
-
-        }
-
     }
 }
