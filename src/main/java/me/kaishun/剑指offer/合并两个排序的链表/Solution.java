@@ -1,18 +1,11 @@
 package me.kaishun.剑指offer.合并两个排序的链表;
 
+import me.kaishun.工具类.ListNode;
+
 /**
  * Created by Administrator on 2018/2/15.
  */
 public class Solution {
-
-    public class ListNode {
-        int val;
-        ListNode next = null;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
 
     /**
      * 挺好的，不过这题可不是我做的
@@ -20,7 +13,7 @@ public class Solution {
      * @param list2
      * @return
      */
-    public ListNode Merge(ListNode list1,ListNode list2) {
+    public ListNode Merge(ListNode list1, ListNode list2) {
         //新建一个头节点，用来存合并的链表。
         ListNode head=new ListNode(-1);
         head.next=null;

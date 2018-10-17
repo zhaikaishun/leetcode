@@ -1,5 +1,7 @@
 package me.kaishun.剑指offer.从头打印链表;
 
+import me.kaishun.工具类.ListNode;
+
 import java.util.ArrayList;
 
 /**
@@ -14,19 +16,5 @@ public class Solution {
             resultList.add(listNode.val);
         }
         return resultList;
-    }
-
-    /**
-     * 这个类一般用来代替链表
-     */
-    public class ListNode
-    {
-        int val;
-        ListNode next;
-
-        public ListNode(int x){
-            val=x;
-        }
-
     }
 }

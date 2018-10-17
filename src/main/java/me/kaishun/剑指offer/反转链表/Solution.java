@@ -1,5 +1,7 @@
 package me.kaishun.剑指offer.反转链表;
 
+import me.kaishun.工具类.ListNode;
+
 import java.util.Stack;
 
 /**
@@ -7,21 +9,12 @@ import java.util.Stack;
  */
 public class Solution {
 
-    public class ListNode {
-        int val;
-        ListNode next = null;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
-
     public static void main(String[] args) {
         Solution solution = new Solution();
-        ListNode listNode = solution.new ListNode(1);
-        listNode.next=solution.new ListNode(2);
-        listNode.next.next=solution.new ListNode(3);
-        listNode.next.next.next=solution.new ListNode(4);
+        ListNode listNode = new ListNode(1);
+        listNode.next= new ListNode(2);
+        listNode.next.next= new ListNode(3);
+        listNode.next.next.next= new ListNode(4);
         ListNode listNode1 = solution.ReverseList(listNode);
         while (listNode1!=null){
             System.out.println(listNode1.val);

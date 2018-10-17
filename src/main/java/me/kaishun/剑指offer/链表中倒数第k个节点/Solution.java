@@ -1,19 +1,13 @@
 package me.kaishun.剑指offer.链表中倒数第k个节点;
 
+import me.kaishun.工具类.ListNode;
+
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  */
 public class Solution {
-    public class ListNode {
-        int val;
-        ListNode next = null;
 
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
-
-    public ListNode FindKthToTail(ListNode head,int k) {
+    public ListNode FindKthToTail(ListNode head, int k) {
 
             return null;
     }
