@@ -1,13 +1,13 @@
-package me.kaishun.各种排序算法.快速排序;
+package me.kaishun.最基础的算法.快排之随机算法;
 
 /**
- * 这是典型的错误案例
+ * Created by Administrator on 2018\11\20 0020.
  */
 public class Solution {
     public static void main(String[] args) {
 //        int[] array = {5,2,8,1,4,3,9};  //int[] array = {1,4,6,5,3,2,3}; 这个排序就有问题
-        int[] array = {1,4,6,5,3,2,3};
-        quickSort(array,0,array.length-1);
+        int[] array = {1,4,6,5,3,2,3,2,11,3,7,4};
+        new Solution().quickSort(array,0,array.length-1);
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]+" ");
         }
@@ -18,7 +18,7 @@ public class Solution {
      * @param array
      * @return
      */
-    private static void quickSort(int[] array,int start,int end) {
+    private  void quickSort(int[] array,int start,int end) {
         if(start>=end){
             return ;
         }
@@ -39,10 +39,11 @@ public class Solution {
      * @param end
      * @return
      */
-    private static int[] partition(int array[] ,int start, int end) {
+    private  int[] partition(int array[] ,int start, int end) {
         int less = start - 1;
         int more = end+1;
-        int number = array[end];
+        int randomNum = end-(int) (Math.random() * (end - start + 1));// 随机排序就是随机取一个数而已
+        int number = array[randomNum];
         while (start<more){
             if(array[start]<number){
                 swap(array,++less,start++);
@@ -52,10 +53,9 @@ public class Solution {
                 swap(array,start,--more);
             }
         }
-
         return new int[]{less+1,more-1};
     }
-    private static void swap(int[] arr, int i, int j) {
+    private  void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;

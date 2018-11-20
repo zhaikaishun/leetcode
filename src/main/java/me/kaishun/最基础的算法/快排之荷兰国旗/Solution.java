@@ -1,7 +1,7 @@
-package me.kaishun.各种排序算法.快速排序;
+package me.kaishun.最基础的算法.快排之荷兰国旗;
 
 /**
- * 这是典型的错误案例
+ * Created by Administrator on 2018\11\20 0020.
  */
 public class Solution {
     public static void main(String[] args) {
