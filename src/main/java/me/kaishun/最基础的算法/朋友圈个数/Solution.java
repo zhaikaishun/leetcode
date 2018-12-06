@@ -19,6 +19,7 @@ public class Solution {
             //合并操作
             join(r[i][0], r[i][1]);
         }
+        //有多少个不相等的，就有多少个朋友圈
         count = 0;
         for (i = 1; i < set.length; ++i) {
             if (set[i] == i){
